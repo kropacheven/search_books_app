@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Carousel } from 'react-bootstrap';
 import SearchForm from "./components/SearchForm";
 import DropdownMenu from "./components/Dropdown";
+import Results from "./components/Results";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <DropdownMenu />
         </Container>
       </Carousel>
+      <hr></hr>
+      <Results />
     </div>
   );
 }
