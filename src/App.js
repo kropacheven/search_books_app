@@ -6,15 +6,14 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
-
 function App() {
   return (
     <div>
-      <Container>
+      <Container className="mt-4 p-5 bg-secondary">
         <Row>
           <Col sm={2}></Col>
           <Col sm={8}>
-            <h1>Search book app</h1>
+            <h1 className="text-light">Search book app</h1>
           </Col>
           <Col sm={2}></Col>
         </Row>
@@ -27,7 +26,7 @@ function App() {
                 aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
               />
-              <Button variant="secondary" id="button-addon2">
+              <Button variant="primary" id="button-addon2">
                 Start
               </Button>
             </InputGroup>
@@ -37,10 +36,10 @@ function App() {
         <Row>
           <Col sm={3}></Col>
           <Col sm={3}>
-            <h6>Category:</h6>
+            <h6 className="text-light">Category:</h6>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
+                Dropdown
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -51,10 +50,10 @@ function App() {
             </Dropdown>
           </Col>
           <Col sm={3}>
-            <h6>Filter:</h6>
+            <h6 className="text-light">Filter:</h6>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
+                Dropdown
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
