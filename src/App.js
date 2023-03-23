@@ -7,7 +7,7 @@ import Results from "./components/Results";
 function App() {
   return (
     <div>
-      <Carousel>
+      <Carousel >
         <Container>
           <h1>Search for Books</h1>
           <SearchForm />
