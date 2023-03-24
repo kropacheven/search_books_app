@@ -1,4 +1,8 @@
 import React from "react";
+import {useEffect, useState} from 'react';
+import axios from 'axios';
+
+
 import SearchForm from "./components/SearchForm";
 import DropdownMenu from "./components/DropdownMenu";
 // import { Col, Row, Container } from 'react-bootstrap';
@@ -9,6 +13,22 @@ import DropdownMenu from "./components/DropdownMenu";
 
 
 function App() {
+  const [book, setBook] = useState([]);
+
+  useEffect(() => {
+    // SearchForm fetch request:
+    axios.get()
+      .then(response => {
+        //handle success
+        setBook(response.data);
+      })
+      .catch(error => {
+        //handle error
+        console.log("Error while fetching and parsing data!")
+      })
+  }, []) 
+
+
   return (
     <div className="container text-center">
       <h1 className='display-5 mb-3'>Search for books</h1>
@@ -25,7 +45,7 @@ function App() {
         <h6>Found 0 results</h6>
       </div>
       <div>
-        
+
       </div>
 
     </div>
