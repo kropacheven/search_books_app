@@ -17,10 +17,11 @@ function App() {
 
   useEffect(() => {
     // SearchForm fetch request:
-    axios.get()
+    axios.get("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor")
       .then(response => {
         //handle success
-        setBook(response.data);
+        console.log(response.data)
+        //setBook(response.data);
       })
       .catch(error => {
         //handle error
