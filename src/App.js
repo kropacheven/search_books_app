@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import SearchForm from "./components/SearchForm";
 import DropdownMenu from "./components/DropdownMenu";
+import BookContainer from "./components/BookContainer";
 // import { Col, Row, Container } from 'react-bootstrap';
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
@@ -13,15 +14,15 @@ import DropdownMenu from "./components/DropdownMenu";
 
 
 function App() {
-  const [book, setBook] = useState([]);
+  const [books, setBook] = useState([]);
 
   useEffect(() => {
     // SearchForm fetch request:
     axios.get("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor")
       .then(response => {
         //handle success
-        console.log(response.data)
-        //setBook(response.data);
+        //console.log(response.data)
+        setBook(response.data.items);
       })
       .catch(error => {
         //handle error
@@ -46,7 +47,7 @@ function App() {
         <h6>Found 0 results</h6>
       </div>
       <div>
-
+        <BookContainer data={books}/>
       </div>
 
     </div>
