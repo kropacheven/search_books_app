@@ -6,9 +6,10 @@ const BookComponent = (props) => {
     return (
       <li>
         <h4><strong>{props.title}</strong></h4>
-        <h6>{props.category}</h6>
+        <h6>[{props.category}]</h6>
         <h6>{props.author}</h6>
         <img src={props.thumbnail} alt={props.title} />
+        <hr></hr>
       </li>
     );
 }

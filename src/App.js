@@ -45,6 +45,7 @@ function App() {
       <div>
         <br></br>
         <h6>Found 0 results</h6>
+        <hr></hr>
       </div>
       <div>
         <BookContainer data={books}/>

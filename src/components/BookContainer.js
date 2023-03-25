@@ -12,7 +12,6 @@ const BookContainer = (props) => {
     // }
     return (
         <div className="book-container">
-            <h2>Results</h2>
             <ol>
                 {books}
             </ol>
