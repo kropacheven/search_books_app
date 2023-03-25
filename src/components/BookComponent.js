@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookComponent = (props) => {
     //let url = `https://live.staticflickr.com/${props.serverId}/${props.nameId}_${props.secret}_w.jpg`;
-    console.log(props.author);
+    //console.log(props.author);
     return (
       <li>
         <h4><strong>{props.title}</strong></h4>

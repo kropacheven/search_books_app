@@ -15,11 +15,11 @@ import BookContainer from "./components/BookContainer";
 
 function App() {
   const [books, setBook] = useState([]);
-  const [query, setQuery] = useState("cats");
+  const [query, setQuery] = useState("javascript");
 
   useEffect(() => {
     // SearchForm fetch request:
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+intitle`)
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+subject&maxResults=35`)
       .then(response => {
         //handle success
         console.log(response)
