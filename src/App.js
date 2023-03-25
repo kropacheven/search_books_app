@@ -15,26 +15,31 @@ import BookContainer from "./components/BookContainer";
 
 function App() {
   const [books, setBook] = useState([]);
+  const [query, setQuery] = useState("cats");
 
   useEffect(() => {
     // SearchForm fetch request:
-    axios.get("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor")
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+intitle`)
       .then(response => {
         //handle success
-        //console.log(response.data)
+        console.log(response)
         setBook(response.data.items);
       })
       .catch(error => {
         //handle error
         console.log("Error while fetching and parsing data!")
       })
-  }, []) 
+  }, [query]);
+  
+  const handleQueryChange = searchText => {
+    setQuery(searchText);
+  }
 
 
   return (
     <div className="container text-center">
       <h1 className='display-5 mb-3'>Search for books</h1>
-      <SearchForm />
+      <SearchForm changeQuery={handleQueryChange}/>
       <div>
         <h6>Category</h6>
         <DropdownMenu />
