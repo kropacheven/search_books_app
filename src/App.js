@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     // SearchForm fetch request:
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+subject&maxResults=35`)
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}&maxResults=16`)
       .then(response => {
         //handle success
         console.log(response)
