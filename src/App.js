@@ -4,7 +4,8 @@ import axios from 'axios';
 
 
 import SearchForm from "./components/SearchForm";
-import DropdownMenu from "./components/DropdownMenu";
+import DropdownCategory from "./components/DropdownCategory";
+import DropdownFilter from "./components/DropdownFilter";
 import BookContainer from "./components/BookContainer";
 
 
@@ -35,12 +36,13 @@ function App() {
     <div className="container text-center">
       <h1 className='display-5 mb-3'>Search for books</h1>
       <SearchForm changeQuery={handleQueryChange}/>
+      <br></br>
       <div>
         <h6>Category</h6>
-        <DropdownMenu />
+        <DropdownCategory />
         <br></br>
         <h6>Filter</h6>
-        <DropdownMenu />
+        <DropdownFilter />
       </div>
       <div>
         <br></br>
