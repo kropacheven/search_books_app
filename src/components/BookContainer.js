@@ -1,22 +1,28 @@
 import React from 'react';
 import BookComponent from './BookComponent';
 
+import Container from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+
+
 const BookContainer = (props) => {
     const results = props.data;
     let books;
     //console.log(results);
     // if (results.length > 0) {
-    books = results.map(book => <BookComponent title={book.volumeInfo.title} category={book.volumeInfo.categories} author={book.volumeInfo.authors} thumbnail={book.volumeInfo.imageLinks.thumbnail} key={book.id}/>);
+    books = results.map(book => <BookComponent title={book.volumeInfo.title} category={book.volumeInfo.categories} author={book.volumeInfo.authors} thumbnail={book.volumeInfo.imageLinks.thumbnail} key={book.id} />);
     // } else {
-        //photos = <NotFound />;
+    //photos = <NotFound />;
     // }
     return (
-        <div className="book-container">
-            <ol>
+        <Container>
+            <Row xs={1} md="auto">
                 {books}
-            </ol>
-        </div>
+            </Row>
+        </Container>
+
     );
 }
+
 
 export default BookContainer;

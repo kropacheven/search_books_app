@@ -1,17 +1,22 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 const BookComponent = (props) => {
-    //let url = `https://live.staticflickr.com/${props.serverId}/${props.nameId}_${props.secret}_w.jpg`;
-    //console.log(props.author);
-    return (
-      <li>
-        <h4><strong>{props.title}</strong></h4>
-        <h6>[{props.category}]</h6>
-        <h6>{props.author}</h6>
-        <img src={props.thumbnail} alt={props.title} />
-        <hr></hr>
-      </li>
-    );
+  //console.log(props.author);
+  return (
+    <Card style={{ width: '15rem' }} className="mx-auto my-3 p-2">
+      <Card.Img variant="top" src={props.thumbnail} alt={props.title}/>
+      <Card.Body>
+        <Card.Title><strong>{props.title}</strong></Card.Title>
+        <Card.Text>
+         <h6>/{props.category}/</h6>
+         <p>{props.author}</p>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
 }
+
+
 
 export default BookComponent;
