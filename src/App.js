@@ -22,7 +22,7 @@ function App() {
       .then(response => {
         //handle success
         if (activeFetch) {
-          //console.log(response)
+          console.log(response)
           setBook(response.data.items);
           setLoading(false);
         }
