@@ -12,14 +12,20 @@ import BookContainer from "./components/BookContainer";
 function App() {
   const [books, setBook] = useState([]);
   const [query, setQuery] = useState("javascript");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+    let activeFetch = true;
     // SearchForm fetch request:
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}&maxResults=16`)
       .then(response => {
         //handle success
-        console.log(response)
-        setBook(response.data.items);
+        if (activeFetch) {
+          //console.log(response)
+          setBook(response.data.items);
+          setLoading(false);
+        }
       })
       .catch(error => {
         //handle error
@@ -52,7 +58,12 @@ function App() {
         <hr></hr>
       </div>
       <div>
-        <BookContainer data={books} />
+        {
+          (loading)
+          ? <p>Loading...</p>
+          :
+         <BookContainer data={books} />
+          }
       </div>
 
     </div>
