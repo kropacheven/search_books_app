@@ -16,8 +16,9 @@ h1 {
   text-align: center;
 }
 
-/* .container {
-  background-image: url("https://placeimg.com/640/480/book");
+.search-header {
+  background-image: url("education.png");
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
+

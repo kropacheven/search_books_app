@@ -3,7 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 function DropdownCategory(props) {
     return (
         <Dropdown>
-            <Dropdown.Toggle variant="outline-secondary" id="dropdown-basic" className="sm">
+            <Dropdown.Toggle variant="secondary" id="dropdown-basic" className="sm">
                 Category
             </Dropdown.Toggle>
 

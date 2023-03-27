@@ -1,5 +1,5 @@
 import React from "react";
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
@@ -26,7 +26,7 @@ function App() {
         console.log("Error while fetching and parsing data!")
       })
   }, [query]);
-  
+
   const handleQueryChange = searchText => {
     setQuery(searchText);
   }
@@ -34,15 +34,17 @@ function App() {
 
   return (
     <div className="container text-center">
-      <h1 className='display-5 mb-3'>Search for books</h1>
-      <SearchForm changeQuery={handleQueryChange}/>
-      <br></br>
-      <div>
-        <h6>Category</h6>
-        <DropdownCategory />
+      <div className='search-header p-5'>
+        <h1 className='display-5 mb-3'>Search for books</h1>
+        <SearchForm changeQuery={handleQueryChange} />
         <br></br>
-        <h6>Filter</h6>
-        <DropdownFilter />
+        <div>
+          <h6 className='text-white'>Category</h6>
+          <DropdownCategory />
+          <br></br>
+          <h6 className='text-white'>Filter</h6>
+          <DropdownFilter />
+        </div>
       </div>
       <div>
         <br></br>
@@ -50,7 +52,7 @@ function App() {
         <hr></hr>
       </div>
       <div>
-        <BookContainer data={books}/>
+        <BookContainer data={books} />
       </div>
 
     </div>
