@@ -12,7 +12,7 @@ function Example(props) {
   return (
     <>
       <Button variant="secondary" onClick={handleShow}>
-        See more...
+        Learn more...
       </Button>
 
       <Modal show={show} onHide={handleClose}>
