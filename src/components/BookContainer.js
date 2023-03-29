@@ -20,7 +20,6 @@ const BookContainer = (props) => {
                 {books}
             </Row>
         </Container>
-
     );
 }
 
