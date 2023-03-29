@@ -21,8 +21,8 @@ function Example(props) {
         <Modal.Body>
             <img src={props.src} alt={props.title} className='text-center'></img>
             <hr></hr>
-            <h6><strong>Category:</strong> {props.category}</h6>
-            <h6><strong>Author:</strong> {props.author}</h6>
+            <h5><strong>Category:</strong> {props.category}</h5>
+            <h5><strong>Author:</strong> {props.author}</h5>
             <p><strong>Description:</strong> {props.description}</p>
         </Modal.Body>
       </Modal>

@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     let activeFetch = true;
     // SearchForm fetch request:
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}&maxResults=16`)
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${query}&filter=ebooks&maxResults=40&orderBy=relevance`)
       .then(response => {
         //handle success
         if (activeFetch) {

@@ -4,7 +4,7 @@ function DropdownCategory(props) {
     return (
         <Dropdown>
             <Dropdown.Toggle variant="secondary" id="dropdown-basic" className="sm">
-                Category
+                Category:
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

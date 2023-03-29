@@ -4,7 +4,7 @@ function DropdownFilter(props) {
     return (
         <Dropdown>
             <Dropdown.Toggle variant="secondary" id="dropdown-basic" className="sm">
-                Filter
+                Filter:
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

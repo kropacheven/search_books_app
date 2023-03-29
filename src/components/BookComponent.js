@@ -10,8 +10,9 @@ const BookComponent = (props) => {
       <Card.Body>
         <Card.Title><strong>{props.title}</strong></Card.Title>
         <Card.Text>
-         <h6>/{props.category}/</h6>
-         <h6>{props.author}</h6>
+         <u>{props.category}</u>
+         <br></br>
+         <i>{props.author}</i>
         </Card.Text>
         <Example title={props.title} src={props.thumbnail} author={props.author} category={props.category} description={props.description}/>
       </Card.Body>
