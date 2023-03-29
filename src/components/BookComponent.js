@@ -20,5 +20,4 @@ const BookComponent = (props) => {
 }
 
 
-
 export default BookComponent;
