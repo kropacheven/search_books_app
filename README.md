@@ -1,5 +1,18 @@
 # Getting Started with Create React App
 
+SearchBookApp:
+
+Приложение по поиску электронных книг из внешней библиотеки Google Books API. 
+Поисковый search элемент позволяет найти любую электронную книгу по введенному запросу.
+Запрос выдыет книги в соответетствии с релевантностью.
+Максимальное количестов поиска - 40 книг (лимит запроса из Google API по документации).
+Книги отображаются в виде карточек. При нажатии кнопки "Learn more" на карточке книги предоставляеnся более подробное описание в форме модального окна. Интерфейс приложения адаптивный. При загрузке контента в ожидании запроса отображаетcя Loader element.
+По умолчанию при первой загрузке приложения отображаются книги по теме JavaScript.
+
+Технологии: React(components, hooks, axios), React Bootstrap, HTML, CSS, JavaScript.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
