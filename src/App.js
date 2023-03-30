@@ -4,8 +4,8 @@ import axios from 'axios';
 
 
 import SearchForm from "./components/SearchForm";
-import DropdownCategory from "./components/DropdownCategory";
-import DropdownFilter from "./components/DropdownFilter";
+//import DropdownCategory from "./components/DropdownCategory";
+//import DropdownFilter from "./components/DropdownFilter";
 import BookContainer from "./components/BookContainer";
 
 
@@ -40,16 +40,18 @@ function App() {
 
   return (
     <div className="container text-center">
-      <div className='search-header p-5'>
+      <div className='search-header p-5 pb-6'>
         <h1 className='display-5 mb-3'>Search for books</h1>
         <SearchForm changeQuery={handleQueryChange} />
         <br></br>
         <div>
-          <h6 className='text-white'>Category</h6>
-          <DropdownCategory />
           <br></br>
-          <h6 className='text-white'>Filter</h6>
-          <DropdownFilter />
+          {/* <h6 className='text-white'>Category</h6>
+          <DropdownCategory /> */}
+          <br></br>
+          {/* <h6 className='text-white'>Filter</h6>
+          <DropdownFilter /> */}
+          <br></br>
         </div>
       </div>
       <div>
